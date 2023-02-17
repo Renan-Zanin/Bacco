@@ -1,0 +1,62 @@
+.depositionsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-100);
+  padding: 139.5px 360px 161.94px;
+  width: "100%";
+  align-items: center;
+  justify-content: center;
+}
+
+.depositionItems {
+  display: grid;
+  grid-template-columns: repeat(2, 506.96px);
+  grid-column-gap: 120.5px;
+}
+
+.depositionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 36.43px;
+}
+
+.img {
+  width: 128.88px;
+  height: 128.88px;
+  background-color: var(--gray-400);
+  border-radius: 999px;
+}
+
+.titleContainer {
+  margin-left: 32.08px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.starsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 35px);
+  grid-column-gap: 15px;
+}
+
+.depositionDescription {
+  width: 481.69px;
+  height: 186px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-left: 10px;
+}
+
+.depositionButton {
+  width: 387px;
+  height: 88.82px;
+  background-color: var(--green-200);
+  border: none;
+  margin-top: 130px;
+}

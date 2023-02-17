@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gray-200);
+  padding: 62.76px 360px;
+  width: "100%";
+  align-items: center;
+}
+
+.logo {
+  width: 285px;
+  height: 53.58px;
+  background: var(--gray-300);
+}
+
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 56px;
+}
+.menuItems {
+  width: 154.62px;
+  height: 38.42px;
+  background: var(--gray-300);
+}
