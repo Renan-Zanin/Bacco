@@ -6,6 +6,10 @@
   width: "100%";
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(90deg, #000000 -12.75%, rgba(0, 0, 0, 0) 109.61%),
+    url("../../assets/institutional.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .institutionalDescription {
@@ -16,20 +20,16 @@
 }
 
 .title {
-  font-size: 80px;
+  font-size: 90px;
   line-height: 130%;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 50.94px;
-}
-
-.institutionalImage {
-  width: 488px;
-  height: 598.29px;
-  background-color: var(--gray-400);
+  color: white;
 }
 
 .description {
   font-size: 30px;
   line-height: 130%;
-  font-weight: "regular";
+  font-weight: 400;
+  color: white;
 }

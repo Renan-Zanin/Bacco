@@ -1,17 +1,34 @@
-import styles from "./HeroSection.module.css";
+import {
+  HeroButton,
+  HeroContainer,
+  HeroSpan,
+  HeroText,
+  HeroTextContainer,
+} from "./HeroSection";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export function HeroSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      delay: 200,
+      once: false,
+    });
+  }, []);
   return (
-    <section className={styles.heroContainer}>
-      <div>
-        <div className={styles.heroTextContainer}>
-          <h1 className={styles.heroText}>
-            Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing
-            elit sed do <span>eiusmod</span>
-          </h1>
-        </div>
-        <button className={styles.heroButton}></button>
+    <HeroContainer>
+      <div data-aos="fade-right">
+        <HeroTextContainer data-aos="fade-right">
+          <HeroText>
+            Os <HeroSpan>melhores</HeroSpan> kits e bebidas para você{" "}
+            <HeroSpan>impressionar!</HeroSpan>
+          </HeroText>
+        </HeroTextContainer>
+        <HeroButton data-aos="fade-right">Comprar agora</HeroButton>
       </div>
-    </section>
+    </HeroContainer>
   );
 }

@@ -17,4 +17,5 @@ body {
   background: #f0f0f0;
   color: #000;
   -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
 }
