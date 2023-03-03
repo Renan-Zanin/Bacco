@@ -13,11 +13,20 @@ import { DepositionsSection } from "./components/DepositionsSection";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
+import Sidebar from "./components/Sidebar";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+
+      <Header toggle={toggle} isOpen={isOpen} />
       <HeroSection />
       <Products />
       <Prizes />

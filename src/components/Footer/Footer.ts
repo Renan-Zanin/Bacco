@@ -11,10 +11,15 @@ export const FooterContainer = styled.footer`
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.white};
 
-  padding: 81.17px 210.32px 80.44px;
-  width: "100%";
+  padding-top: 81.17px;
+  padding-bottom: 80.44px;
+  width: 100%;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterData = styled.div`

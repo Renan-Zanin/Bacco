@@ -1,7 +1,9 @@
 import {
   AboutButton,
   PrizeDescription,
+  PrizesBg,
   PrizesContainer,
+  PrizesContent,
   PrizesImg,
   PrizesWrapper,
   PrizeTitle,
@@ -23,8 +25,9 @@ export function Prizes() {
     });
   }, []);
   return (
-    <PrizesContainer>
-      <div data-aos="fade-right">
+    <PrizesContainer id="prizes">
+      <PrizesBg />
+      <PrizesContent data-aos="fade-right">
         <PrizesWrapper>
           <PrizesImg src={wva} height={85} width={67.74} />
           <PrizesImg src={cnvd} height={111.19} width={110.73} padding={3.45} />
@@ -38,7 +41,7 @@ export function Prizes() {
           eiusmod tempor.
         </PrizeDescription>
         <AboutButton data-aos="fade-right">leia mais sobre</AboutButton>
-      </div>
+      </PrizesContent>
     </PrizesContainer>
   );
 }

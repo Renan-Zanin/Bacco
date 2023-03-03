@@ -5,9 +5,7 @@ interface DescriptionProps {
 }
 interface DescriptionPropsRight {
   width: number;
-  margin: number;
 }
-
 interface BgProps {
   image: string;
 }
@@ -16,12 +14,19 @@ export const PreparationContainer = styled.section`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.black};
-  background-size: cover;
-  background-repeat: no-repeat;
   align-items: center;
 
-  padding: 160px 497.89px 207.68px 497.89px;
-  width: "100%";
+  padding-top: 160px;
+  padding-bottom: 160px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 90px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-top: 60px;
+  }
 `;
 
 export const SectionTitle = styled.h1`
@@ -33,13 +38,21 @@ export const SectionTitle = styled.h1`
   padding-bottom: 64.41px;
   text-align: center;
   line-height: 130%;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${({ theme }) => theme.font_size.X}px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.SM}px;
+  }
 `;
 
 export const DrinkStepLeft = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+`;
+export const DrinkStepRight = styled.div`
+  position: relative;
 `;
 
 export const DrinkLeftBg = styled.div<BgProps>`
@@ -53,11 +66,68 @@ export const DrinkLeftBg = styled.div<BgProps>`
   align-items: center;
   justify-content: center;
   background-size: cover;
+  margin-left: -400px;
   z-index: 0;
 `;
+
+export const StepWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 90px;
+  left: -298.03px;
+`;
+
+export const StepWrapperRight = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 90px;
+  left: -338.03px;
+`;
+
+export const Step = styled.img`
+  z-index: 20;
+  margin-right: 30px;
+  margin-left: 78.03px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 60%;
+  }
+`;
+
+export const StepDescription = styled.p<DescriptionProps>`
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.font_size.SM}px;
+  line-height: 120%;
+  font-weight: 400;
+  text-align: start;
+  flex-grow: 1;
+  width: ${(props) => props.width}px;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${({ theme }) => theme.font_size.XSM_R}px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
+`;
+
+export const StepSpan = styled.span`
+  font-weight: 800;
+`;
+
 export const DrinkRightBg = styled.div<BgProps>`
   display: flex;
-  margin-left: -20px;
   width: 449.46px;
   height: 379.46px;
   background: url(${(props) => props.image});
@@ -67,29 +137,23 @@ export const DrinkRightBg = styled.div<BgProps>`
   align-items: center;
   justify-content: center;
   background-size: cover;
-  z-index: 1;
-`;
+  margin-right: -500px;
 
-export const Step = styled.img`
-  margin-left: -19px;
-  z-index: 20;
-  margin-right: 30px;
+  z-index: 1;
 `;
 
 export const StepRight = styled.img`
   z-index: 20;
+  margin-left: 30px;
+  margin-right: 78.03px;
 `;
 
 export const StepImg = styled.img`
   z-index: 20;
-  position: absolute;
-  margin-left: -300px;
 `;
 
 export const StepImgRight = styled.img`
   z-index: 20;
-  position: absolute;
-  margin-left: 500.06px;
 `;
 
 export const StepDescriptionRight = styled.p<DescriptionPropsRight>`
@@ -98,19 +162,14 @@ export const StepDescriptionRight = styled.p<DescriptionPropsRight>`
   line-height: 120%;
   font-weight: 400;
   width: ${(props) => props.width}px;
-  margin-left: ${(props) => props.margin}px;
   margin-right: 30px;
   text-align: end;
-`;
 
-export const StepDescription = styled.p<DescriptionProps>`
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.font_size.SM}px;
-  line-height: 120%;
-  font-weight: 400;
-  width: ${(props) => props.width}px;
-`;
+  @media screen and (max-width: 768px) {
+    font-size: ${({ theme }) => theme.font_size.XSM_R}px;
+  }
 
-export const StepSpan = styled.span`
-  font-weight: 800;
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
 `;

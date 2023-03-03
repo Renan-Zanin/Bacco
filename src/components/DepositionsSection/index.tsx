@@ -3,7 +3,7 @@ import { IoMdStar } from "react-icons/io";
 
 export function DepositionsSection() {
   return (
-    <section className={styles.depositionsContainer}>
+    <section className={styles.depositionsContainer} id="depositions">
       <div className={styles.depositionItems}>
         <div>
           <div className={styles.depositionHeader}>

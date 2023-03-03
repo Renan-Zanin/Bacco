@@ -2,7 +2,7 @@ import styles from "./InstitutionalSection.module.css";
 
 export function InstitutionalSection() {
   return (
-    <section className={styles.institutionalContainer}>
+    <section className={styles.institutionalContainer} id="institutional">
       <div className={styles.institutionalDescription}>
         <h1 className={styles.title}>Lorem ipsum dolor sit amet</h1>
         <p className={styles.description}>

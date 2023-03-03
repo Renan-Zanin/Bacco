@@ -11,7 +11,7 @@ export function ClientsSection() {
     speed: 500,
   };
   return (
-    <section className={styles.clientsContainer}>
+    <section className={styles.clientsContainer} id="clients">
       <h1 className={styles.clientsTitle}>Lorem ipsum dolor sit amet</h1>
       <div className={styles.sliderWrapper}>
         <Slider {...settings}>

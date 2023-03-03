@@ -1,6 +1,8 @@
 import {
+  HeroBg,
   HeroButton,
   HeroContainer,
+  HeroContent,
   HeroSpan,
   HeroText,
   HeroTextContainer,
@@ -19,8 +21,9 @@ export function HeroSection() {
     });
   }, []);
   return (
-    <HeroContainer>
-      <div data-aos="fade-right">
+    <HeroContainer id="home">
+      <HeroBg />
+      <HeroContent data-aos="fade-right">
         <HeroTextContainer data-aos="fade-right">
           <HeroText>
             Os <HeroSpan>melhores</HeroSpan> kits e bebidas para você{" "}
@@ -28,7 +31,7 @@ export function HeroSection() {
           </HeroText>
         </HeroTextContainer>
         <HeroButton data-aos="fade-right">Comprar agora</HeroButton>
-      </div>
+      </HeroContent>
     </HeroContainer>
   );
 }

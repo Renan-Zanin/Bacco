@@ -17,11 +17,13 @@ export default {
 
   font_size: {
     XSM: 16,
+    XSM_R: 20,
     SM: 24,
     MD: 30,
     LG: 35,
     X: 38,
     XL: 50,
+    XL_R: 65,
     XXL: 80,
     XXXL: 90,
   },

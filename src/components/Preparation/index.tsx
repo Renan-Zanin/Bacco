@@ -2,6 +2,7 @@ import {
   DrinkLeftBg,
   DrinkRightBg,
   DrinkStepLeft,
+  DrinkStepRight,
   PreparationContainer,
   SectionTitle,
   Step,
@@ -11,6 +12,8 @@ import {
   StepImgRight,
   StepRight,
   StepSpan,
+  StepWrapper,
+  StepWrapperRight,
 } from "./Preparation";
 import step1 from "../../assets/step1.png";
 import drink1 from "../../assets/drink1.png";
@@ -38,47 +41,71 @@ export function Preparation() {
     });
   }, []);
   return (
-    <PreparationContainer>
-      <SectionTitle>
+    <PreparationContainer id="preparation">
+      <SectionTitle data-aos="fade-down">
         como preparar os
         <br /> concentrados da bacco spirit
       </SectionTitle>
-      <DrinkStepLeft>
-        <DrinkLeftBg image={step1_bg} />
-        <StepImg src={drink1} data-aos="fade-right" />
-        <Step src={step1} />
-        <StepDescription width={219.85} data-aos="fade-left">
-          Primeiro, coloque <StepSpan>gelo</StepSpan> no copo/caneca
-        </StepDescription>
-      </DrinkStepLeft>
 
       <DrinkStepLeft>
-        <StepDescriptionRight width={234.65} margin={180} data-aos="fade-right">
-          Adicione <StepSpan>50 ml do concentrado</StepSpan> de sua preferência
-        </StepDescriptionRight>
-        <StepRight src={step2} />
-        <DrinkRightBg image={step2_bg} />
-        <StepImgRight src={drink2} data-aos="fade-left" />
+        <DrinkLeftBg image={step1_bg} />
+        <StepWrapper>
+          <StepImg src={drink1} data-aos="fade-right" />
+          <Step src={step1} data-aos="fade-down" />
+          <StepDescription width={219.85} data-aos="fade-left">
+            Primeiro, coloque <br /> <StepSpan>gelo</StepSpan> no copo/caneca
+          </StepDescription>
+        </StepWrapper>
       </DrinkStepLeft>
+
+      <DrinkStepRight>
+        <StepWrapperRight>
+          <StepDescriptionRight width={234.65} data-aos="fade-right">
+            Adicione{" "}
+            <StepSpan>
+              50 ml do <br />
+              concentrado
+            </StepSpan>{" "}
+            de sua <br />
+            preferência
+          </StepDescriptionRight>
+          <StepRight src={step2} data-aos="fade-down" />
+          <StepImgRight src={drink2} data-aos="fade-left" />
+        </StepWrapperRight>
+        <DrinkRightBg image={step2_bg} />
+      </DrinkStepRight>
 
       <DrinkStepLeft>
         <DrinkLeftBg image={step3_bg} />
-        <StepImg src={drink3} data-aos="fade-right" />
-        <Step src={step3} />
-        <StepDescription width={309.97} data-aos="fade-left">
-          Complete com a quantidade de{" "}
-          <StepSpan>água descrita na embalagem</StepSpan> e misture
-        </StepDescription>
+        <StepWrapper>
+          <StepImg src={drink3} data-aos="fade-right" />
+          <Step src={step3} data-aos="fade-down" />
+          <StepDescription width={309.97} data-aos="fade-left">
+            Complete com a quantidade <br /> de{" "}
+            <StepSpan>
+              água descrita na <br />
+              embalagem
+            </StepSpan>{" "}
+            e misture
+          </StepDescription>
+        </StepWrapper>
       </DrinkStepLeft>
 
-      <DrinkStepLeft>
-        <StepDescriptionRight width={234.65} margin={180} data-aos="fade-right">
-          Adicione <StepSpan>50 ml do concentrado</StepSpan> de sua preferência
-        </StepDescriptionRight>
-        <StepRight src={step4} />
+      <DrinkStepRight>
+        <StepWrapperRight style={{ marginLeft: "-67.54px" }}>
+          <StepDescriptionRight width={302.11} data-aos="fade-right">
+            Pronto! Para Moscow Mule <br /> finalize com a{" "}
+            <StepSpan>
+              espuma de <br />
+              gengibre
+            </StepSpan>{" "}
+            da Bacco Spirit
+          </StepDescriptionRight>
+          <StepRight src={step4} data-aos="fade-down" />
+          <StepImgRight src={drink4} data-aos="fade-left" />
+        </StepWrapperRight>
         <DrinkRightBg image={step4_bg} />
-        <StepImgRight src={drink4} data-aos="fade-left" />
-      </DrinkStepLeft>
+      </DrinkStepRight>
     </PreparationContainer>
   );
 }

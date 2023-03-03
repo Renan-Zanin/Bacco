@@ -6,7 +6,7 @@ import {
   ProductsContainer,
   ProductsWrapper,
   SectionTitle,
-} from "./Prizes";
+} from "./Products";
 import moscow_mule from "../../assets/moscow_mule.png";
 import fire from "../../assets/fire.png";
 import apple_pie from "../../assets/apple_pie.png";
