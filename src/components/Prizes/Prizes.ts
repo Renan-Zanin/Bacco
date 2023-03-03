@@ -14,7 +14,7 @@ export const PrizesContainer = styled.div`
   padding-top: 213.05px;
   padding-bottom: 319.61px;
   padding-left: 357.17px;
-  align-items: center;
+  align-items: start;
   margin: 0 auto;
   height: 1200px;
   background-position: center;
