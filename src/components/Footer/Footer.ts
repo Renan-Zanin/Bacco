@@ -31,7 +31,8 @@ export const FooterContainer = styled.footer`
 export const FooterData = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 124.54px;
+  margin-right: 324.54px;
+  width: 100%;
   @media (max-width: 768px) {
     margin-right: 0px;
   }
@@ -61,12 +62,16 @@ export const FooterInfosContainer = styled.div`
 `;
 
 export const FooterInfos = styled.p`
-  font-size: ${({ theme }) => theme.font_size.XSM}px;
+  font-size: ${({ theme }) => theme.font_size.XSM_R}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 130%;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 5px;
+
+  @media (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -83,19 +88,22 @@ export const NavContainer = styled.div`
   @media (max-width: 480px) {
     margin-right: 0px;
 
-    grid-row: 2; /* coloca o item na segunda linha */
     grid-column: 1;
     align-items: start;
   }
 `;
 
 export const NavItem = styled.nav`
-  font-size: ${({ theme }) => theme.font_size.XSM}px;
+  font-size: ${({ theme }) => theme.font_size.XSM_R}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 130%;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 22.22px;
+
+  @media (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
 `;
 
 export const PaymentContainer = styled.div`
@@ -110,26 +118,32 @@ export const PaymentContainer = styled.div`
     margin-right: 0px;
     margin-top: 100px;
 
-    grid-row: 2; /* coloca o item na segunda linha */
+    grid-row: 2;
     grid-column: 2;
     justify-content: start;
   }
 
   @media (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+
     margin-top: 20px;
-    grid-row: 3; /* coloca o item na segunda linha */
+    grid-row: 3;
     grid-column: 1;
     justify-content: start;
   }
 `;
 
 export const PaymentText = styled.p`
-  font-size: ${({ theme }) => theme.font_size.XSM}px;
+  font-size: ${({ theme }) => theme.font_size.XSM_R}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 130%;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 22.22px;
+
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
 `;
 
 export const PaymentItems = styled.img`
@@ -145,12 +159,12 @@ export const ContactContainer = styled.div`
   @media (max-width: 768px) {
     margin-right: 0px;
 
-    grid-row: 2; /* coloca o item na segunda linha */
+    grid-row: 2;
     grid-column: 1;
     align-items: start;
   }
   @media (max-width: 480px) {
-    grid-row: 4; /* coloca o item na segunda linha */
+    grid-row: 4;
     grid-column: 1;
     justify-content: start;
     margin-top: -150px;
@@ -158,6 +172,7 @@ export const ContactContainer = styled.div`
 `;
 
 export const ContactTitle = styled.p`
+  font-size: ${({ theme }) => theme.font_size.XSM_R}px;
   font-size: ${({ theme }) => theme.font_size.XSM}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 120%;
@@ -178,6 +193,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ContactText = styled.p`
+  font-size: ${({ theme }) => theme.font_size.XSM_R}px;
   font-size: ${({ theme }) => theme.font_size.XSM}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 120%;
@@ -201,13 +217,13 @@ export const LinksContainer = styled.div`
   @media (max-width: 768px) {
     margin-right: 0px;
     margin-top: -100px;
-    grid-row: 4; /* coloca o item na segunda linha */
+    grid-row: 4;
     grid-column: 4;
     align-items: start;
   }
 
   @media (max-width: 480px) {
-    grid-row: 5; /* coloca o item na segunda linha */
+    grid-row: 5;
     grid-column: 1;
     margin-top: -125px;
   }
