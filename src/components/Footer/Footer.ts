@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.white};
 
   padding: 81.17px 210.32px 80.44px;
-  width: 100%;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
 
@@ -31,7 +31,7 @@ export const FooterContainer = styled.footer`
 export const FooterData = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 324.54px;
+  margin-right: 16%;
   width: 100%;
   @media (max-width: 768px) {
     margin-right: 0px;
@@ -78,8 +78,8 @@ export const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 159.69px;
-  padding-left: 7.41px;
+  margin-right: 8.3%;
+  padding-left: 17.41px;
   height: 324.35px;
 
   @media (max-width: 768px) {
@@ -109,10 +109,9 @@ export const NavItem = styled.nav`
 export const PaymentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 300px;
   height: 324.35px;
   justify-content: end;
-  margin-right: 214.3px;
+  margin-right: 15.15%;
 
   @media (max-width: 768px) {
     margin-right: 0px;
@@ -173,12 +172,15 @@ export const ContactContainer = styled.div`
 
 export const ContactTitle = styled.p`
   font-size: ${({ theme }) => theme.font_size.XSM_R}px;
-  font-size: ${({ theme }) => theme.font_size.XSM}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 120%;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 22.22px;
+
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
 `;
 
 export const ContactWrapper = styled.div`
@@ -194,11 +196,14 @@ export const Wrapper = styled.div`
 
 export const ContactText = styled.p`
   font-size: ${({ theme }) => theme.font_size.XSM_R}px;
-  font-size: ${({ theme }) => theme.font_size.XSM}px;
   color: ${({ theme }) => theme.colors.gray300};
   line-height: 120%;
   font-weight: 600;
   text-transform: uppercase;
+
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
 `;
 
 export const ContactItems = styled.img`

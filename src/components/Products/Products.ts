@@ -4,8 +4,7 @@ export const ProductsContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding-top: 160px;
-  padding-bottom: 180.42px;
+  padding: 160px 5% 180.42px;
   background-color: ${({ theme }) => theme.colors.white};
   width: 100%;
   justify-content: center;
@@ -64,8 +63,8 @@ export const ProductItems = styled.div`
 `;
 
 export const ProductImage = styled.img`
-  width: 349.75px;
-  height: 500.3px;
+  max-width: 100%;
+  max-height: auto;
   margin-bottom: 35.14px;
 
   @media screen and (max-width: 768px) {
