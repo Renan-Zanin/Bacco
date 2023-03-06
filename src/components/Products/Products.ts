@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ProductsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 
   padding-top: 160px;
   padding-bottom: 180.42px;
@@ -11,6 +10,7 @@ export const ProductsContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     padding-top: 80px;
@@ -28,15 +28,15 @@ export const SectionTitle = styled.h1`
   margin-bottom: 100px;
   font-weight: 800;
   text-transform: uppercase;
+  width: 90%;
+  word-break: normal;
 
   @media screen and (max-width: 768px) {
     font-size: ${({ theme }) => theme.font_size.X}px;
-    width: 100%;
   }
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.MD}px;
-    margin-left: 20px;
   }
 `;
 
