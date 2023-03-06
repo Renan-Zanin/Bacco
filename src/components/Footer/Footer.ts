@@ -7,18 +7,24 @@ interface LinkProps {
 }
 
 export const FooterContainer = styled.footer`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background-color: ${({ theme }) => theme.colors.white};
 
-  padding-top: 81.17px;
-  padding-bottom: 80.44px;
+  padding: 81.17px 210.32px 80.44px;
   width: 100%;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 61.17px 18.25% 60.44px;
+
+    grid-column-gap: 50px;
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 41.17px 10.25% 40.44px;
   }
 `;
 
@@ -26,18 +32,32 @@ export const FooterData = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 124.54px;
+  @media (max-width: 768px) {
+    margin-right: 0px;
+  }
 `;
 
 export const FooterLogo = styled.img`
   width: 106.38px;
   height: 65.1px;
   margin-bottom: 124.85px;
+  @media (max-width: 768px) {
+    margin-bottom: 67px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 47px;
+  }
 `;
 
 export const FooterInfosContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 21.39px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10 px;
+  }
 `;
 
 export const FooterInfos = styled.p`
@@ -56,6 +76,17 @@ export const NavContainer = styled.div`
   margin-right: 159.69px;
   padding-left: 7.41px;
   height: 324.35px;
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+  }
+  @media (max-width: 480px) {
+    margin-right: 0px;
+
+    grid-row: 2; /* coloca o item na segunda linha */
+    grid-column: 1;
+    align-items: start;
+  }
 `;
 
 export const NavItem = styled.nav`
@@ -74,6 +105,22 @@ export const PaymentContainer = styled.div`
   height: 324.35px;
   justify-content: end;
   margin-right: 214.3px;
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    margin-top: 100px;
+
+    grid-row: 2; /* coloca o item na segunda linha */
+    grid-column: 2;
+    justify-content: start;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 20px;
+    grid-row: 3; /* coloca o item na segunda linha */
+    grid-column: 1;
+    justify-content: start;
+  }
 `;
 
 export const PaymentText = styled.p`
@@ -94,6 +141,20 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: end;
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+
+    grid-row: 2; /* coloca o item na segunda linha */
+    grid-column: 1;
+    align-items: start;
+  }
+  @media (max-width: 480px) {
+    grid-row: 4; /* coloca o item na segunda linha */
+    grid-column: 1;
+    justify-content: start;
+    margin-top: -150px;
+  }
 `;
 
 export const ContactTitle = styled.p`
@@ -136,6 +197,20 @@ export const LinksContainer = styled.div`
   justify-content: space-between;
   width: 182.46px;
   height: 31.99px;
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    margin-top: -100px;
+    grid-row: 4; /* coloca o item na segunda linha */
+    grid-column: 4;
+    align-items: start;
+  }
+
+  @media (max-width: 480px) {
+    grid-row: 5; /* coloca o item na segunda linha */
+    grid-column: 1;
+    margin-top: -125px;
+  }
 `;
 
 export const ContactLinks = styled.a<LinkProps>`

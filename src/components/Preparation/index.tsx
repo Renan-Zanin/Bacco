@@ -8,6 +8,7 @@ import {
   Step,
   StepDescription,
   StepDescriptionRight,
+  StepDescriptionRight4,
   StepImg,
   StepImgRight,
   StepRight,
@@ -51,9 +52,9 @@ export function Preparation() {
       <DrinkStepLeft>
         <DrinkLeftBg image={step1_bg} />
         <StepWrapper>
-          <StepImg src={drink1} data-aos="fade-right" width={189.38} />
-          <Step src={step1} data-aos="fade-down" width={72.35} />
-          <StepDescription width={219.85} data-aos="fade-left">
+          <StepImg src={drink1} data-aos="fade-up" width={189.38} />
+          <Step src={step1} data-aos="fade-left" width={72.35} />
+          <StepDescription width={219.85} data-aos="fade-down">
             Primeiro, coloque<StepSpan> gelo </StepSpan> no copo/ caneca
           </StepDescription>
         </StepWrapper>
@@ -61,12 +62,11 @@ export function Preparation() {
 
       <DrinkStepRight>
         <StepWrapperRight>
-          <StepDescriptionRight width={234.65} data-aos="fade-right">
-            Adicione <StepSpan>50 ml do concentrado</StepSpan> de sua
-            preferência
+          <StepDescriptionRight width={234.65} data-aos="fade-up">
+            Adicione <StepSpan>50ml do concentrado</StepSpan> de sua preferência
           </StepDescriptionRight>
-          <StepRight src={step2} data-aos="fade-down" width={72.35} />
-          <StepImgRight src={drink2} data-aos="fade-left" width={190.84} />
+          <StepRight src={step2} data-aos="fade-right" width={72.35} />
+          <StepImgRight src={drink2} data-aos="fade-down" width={190.84} />
         </StepWrapperRight>
         <DrinkRightBg src={step2_bg} />
       </DrinkStepRight>
@@ -74,9 +74,9 @@ export function Preparation() {
       <DrinkStepLeft>
         <DrinkLeftBg image={step3_bg} />
         <StepWrapper>
-          <StepImg src={drink3} data-aos="fade-right" width={190.84} />
-          <Step src={step3} data-aos="fade-down" width={72.35} />
-          <StepDescription width={309.97} data-aos="fade-left">
+          <StepImg src={drink3} data-aos="fade-up" width={190.84} />
+          <Step src={step3} data-aos="fade-left" width={72.35} />
+          <StepDescription width={290.97} data-aos="fade-down">
             Complete com a quantida de
             <StepSpan> água descrita na embalagem</StepSpan> e misture
           </StepDescription>
@@ -85,12 +85,12 @@ export function Preparation() {
 
       <DrinkStepRight>
         <StepWrapperRight4>
-          <StepDescriptionRight width={302.11} data-aos="fade-right">
+          <StepDescriptionRight4 width={302.11} data-aos="fade-up">
             Pronto! Para Moscow Mule finalize com a
             <StepSpan> espuma de gengibre</StepSpan> da Bacco Spirit
-          </StepDescriptionRight>
-          <StepRight src={step4} data-aos="fade-down" width={72.35} />
-          <StepImgRight src={drink4} data-aos="fade-left" width={177.94} />
+          </StepDescriptionRight4>
+          <StepRight src={step4} data-aos="fade-right" width={72.35} />
+          <StepImgRight src={drink4} data-aos="fade-down" width={177.94} />
         </StepWrapperRight4>
         <DrinkRightBg src={step4_bg} />
       </DrinkStepRight>

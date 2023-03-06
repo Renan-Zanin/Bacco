@@ -27,7 +27,7 @@ export const PreparationContainer = styled.section`
 
   @media screen and (max-width: 480px) {
     padding-top: 60px;
-    padding-left: 40px;
+    padding-left: 10px;
     padding-right: 10px;
   }
 `;
@@ -84,11 +84,17 @@ export const DrinkLeftBg = styled.div<BgProps>`
   @media screen and (max-width: 768px) {
     height: 300.54px;
     width: auto;
+    transform: scale(0.8);
   }
 
   @media screen and (max-width: 480px) {
-    height: 200.54px;
+    height: 150.54px;
     width: auto;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 390px) {
+    transform: translate(20%, 40%);
   }
 `;
 
@@ -100,13 +106,18 @@ export const StepWrapper = styled.div`
   position: absolute;
   top: 90px;
   left: -298.03px;
+  margin-left: 25px;
 
   @media screen and (max-width: 768px) {
-    margin-left: 50px;
+    margin-left: 70px;
   }
 
   @media screen and (max-width: 480px) {
-    margin-left: 80px;
+    margin-left: 95px;
+  }
+  @media screen and (max-width: 390px) {
+    margin-bottom: 80px;
+    margin-left: 105px;
   }
 `;
 
@@ -118,14 +129,22 @@ export const StepWrapperRight = styled.div`
   position: absolute;
   top: 90px;
   left: -338.03px;
+  margin-left: 75px;
 
   @media screen and (max-width: 768px) {
-    margin-left: 25px;
+    margin-left: 130px;
   }
 
   @media screen and (max-width: 480px) {
-    margin-left: 155px;
-    margin-bottom: 200px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+
+    margin-left: 90px;
+  }
+
+  @media screen and (max-width: 390px) {
+    margin-bottom: 20px;
+    margin-left: 195px;
   }
 `;
 
@@ -137,14 +156,20 @@ export const StepWrapperRight4 = styled.div`
   position: absolute;
   top: 90px;
   left: -405.57px;
+  margin-left: 75px;
 
   @media screen and (max-width: 768px) {
-    margin-left: 20px;
+    margin-left: 145px;
   }
 
   @media screen and (max-width: 480px) {
     left: -250px;
-    margin-left: 45px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-width: 390px) {
+    margin-top: -20px;
+    margin-left: 80px;
   }
 `;
 
@@ -166,6 +191,10 @@ export const Step = styled.img<ImgProps>`
     margin-right: 20px;
     margin-left: 25.03px;
   }
+  @media screen and (max-width: 390px) {
+    margin-right: 15px;
+    margin-left: 15.03px;
+  }
 `;
 
 export const StepDescription = styled.p<DescriptionProps>`
@@ -185,7 +214,34 @@ export const StepDescription = styled.p<DescriptionProps>`
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.XSM}px;
-    width: ${(props) => props.width * 0.3}px;
+    width: ${(props) => props.width * 0.4}px;
+  }
+`;
+
+export const StepDescriptionRight4 = styled.p<DescriptionProps>`
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.font_size.SM}px;
+  line-height: 120%;
+  font-weight: 400;
+  text-align: end;
+  flex-grow: 1;
+  word-break: normal;
+  flex-wrap: wrap;
+  width: ${(props) => props.width}px;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${({ theme }) => theme.font_size.XSM_R}px;
+    width: ${(props) => props.width * 0.7}px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+    width: ${(props) => props.width * 0.5}px;
+  }
+
+  @media screen and (max-width: 390px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+    width: ${(props) => props.width * 0.4}px;
   }
 `;
 
@@ -210,11 +266,19 @@ export const DrinkRightBg = styled.img`
   @media screen and (max-width: 768px) {
     height: 250.54px;
     width: auto;
+    transform: scale(0.8);
   }
 
   @media screen and (max-width: 480px) {
     height: 150.54px;
     width: auto;
+    transform: scale(0.6);
+    margin-bottom: -80px;
+    transform: translate(-15%, 30%);
+  }
+  @media screen and (max-width: 390px) {
+    transform: translate(-15%, 30%);
+    margin-bottom: -80px;
   }
 `;
 
@@ -229,13 +293,17 @@ export const StepRight = styled.img<ImgProps>`
   @media screen and (max-width: 768px) {
     width: ${(props) => props.width * 0.8}px;
     margin-right: 40px;
-    margin-left: 15.03px;
+    margin-left: 30.03px;
   }
 
   @media screen and (max-width: 480px) {
     width: ${(props) => props.width * 0.4}px;
     margin-right: 30px;
     margin-left: 10.03px;
+  }
+  @media screen and (max-width: 390px) {
+    margin-right: 15px;
+    margin-left: 10px;
   }
 `;
 
@@ -276,15 +344,18 @@ export const StepDescriptionRight = styled.p<DescriptionProps>`
   line-height: 120%;
   font-weight: 400;
   width: ${(props) => props.width}px;
-  margin-right: 30px;
   text-align: end;
 
   @media screen and (max-width: 768px) {
     font-size: ${({ theme }) => theme.font_size.XSM_R}px;
+    width: ${(props) => props.width * 0.7}px;
   }
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.XSM}px;
-    width: ${(props) => props.width * 0.4}px;
+  }
+  @media screen and (max-width: 390px) {
+    width: ${(props) => props.width * 0.35}px;
+    margin-right: 5px;
   }
 `;

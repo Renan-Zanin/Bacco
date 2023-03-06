@@ -42,9 +42,9 @@ export const PrizesContainer = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    padding-left: 90px;
     height: 500.66px;
     padding-top: 50px;
+    padding-left: 10%;
   }
 `;
 
