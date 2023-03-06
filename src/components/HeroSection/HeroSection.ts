@@ -33,11 +33,12 @@ export const HeroContainer = styled.section`
   @media screen and (max-width: 768px) {
     padding-left: 144px;
     height: 700px;
+    padding-left: 100px;
   }
 
   @media screen and (max-width: 480px) {
-    padding-left: 90px;
     height: 350px;
+    padding-left: 40px;
   }
 `;
 
@@ -74,7 +75,7 @@ export const HeroTextContainer = styled.div`
   word-break: break-word;
   margin-bottom: 70px;
   @media screen and (max-width: 768px) {
-    width: 616.26px;
+    width: 600.26px;
     margin-bottom: 38px;
     height: 253px;
   }
@@ -116,16 +117,16 @@ export const HeroSpan = styled.span`
   }
 `;
 
-export const HeroButton = styled.button`
+export const HeroButton = styled.a`
   background-color: ${({ theme }) => theme.colors.red};
   line-height: 120%;
   padding: 20px;
   color: ${({ theme }) => theme.colors.white};
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.font_size.MD}px;
-  border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
   :hover {
     filter: brightness(1.2);
     transform: scale(1.05);

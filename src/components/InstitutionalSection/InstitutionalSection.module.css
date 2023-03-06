@@ -1,11 +1,10 @@
 .institutionalContainer {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   background-color: var(--gray-100);
-  padding: 219.97px 360px 208.31px;
-  width: "100%";
-  align-items: center;
-  justify-content: space-between;
+  padding: 219.97px 0 208.31px;
+  align-items: star;
+  justify-content: start;
   background: linear-gradient(90deg, #000000 -12.75%, rgba(0, 0, 0, 0) 109.61%),
     url("../../assets/institutional.png");
   background-size: cover;
@@ -13,13 +12,13 @@
 }
 
 .institutionalDescription {
-  width: 590px;
-  word-break: break-word;
+  width: 600px;
   text-align: start;
   justify-content: flex-start;
 }
 
 .title {
+  width: 90%;
   font-size: 90px;
   line-height: 130%;
   font-weight: 800;
@@ -32,4 +31,38 @@
   line-height: 130%;
   font-weight: 400;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .institutionalDescription {
+    width: 400px;
+    text-align: start;
+    align-items: flex-start;
+    font-size: 30px;
+    margin-left: -100px;
+  }
+  .title {
+    width: 400px;
+    text-align: start;
+    align-items: flex-start;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    width: 300px;
+    font-size: 36px;
+
+    text-align: start;
+    align-items: flex-start;
+    font-size: 50px;
+  }
+  .institutionalDescription {
+    width: 400px;
+    text-align: start;
+    align-items: flex-start;
+    font-size: 30px;
+    margin-left: 20px;
+  }
 }

@@ -31,10 +31,12 @@ export const SectionTitle = styled.h1`
 
   @media screen and (max-width: 768px) {
     font-size: ${({ theme }) => theme.font_size.X}px;
+    width: 100%;
   }
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.MD}px;
+    margin-left: 20px;
   }
 `;
 

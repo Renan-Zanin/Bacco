@@ -2,6 +2,7 @@ import logo from "../../assets/logo.svg";
 import {
   HeaderContainer,
   LogoImage,
+  MenuIcon,
   MobileIcon,
   NavbarContainer,
   NavButton,
@@ -9,8 +10,8 @@ import {
   NavLinks,
   NavMenu,
 } from "./Header";
-import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 interface NavbarProps {
   toggle: () => void;
@@ -18,12 +19,30 @@ interface NavbarProps {
 }
 
 export function Header({ toggle, isOpen }: NavbarProps) {
+  const [showMenu, setShowMenu] = useState(false);
+
+  function handleScroll() {
+    const scrollTop = window.pageYOffset;
+    if (scrollTop > 300) {
+      setShowMenu(true);
+    } else {
+      setShowMenu(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
-    <HeaderContainer>
-      <NavbarContainer isOpen={false}>
-        <LogoImage src={logo} alt="" />
-        <MobileIcon onClick={toggle}>
-          <FaBars />
+    <HeaderContainer showMenu={showMenu}>
+      <NavbarContainer isOpen={isOpen}>
+        <LogoImage src={logo} alt="" showMenu={showMenu} />
+        <MobileIcon onClick={toggle} showMenu={showMenu}>
+          <MenuIcon />
         </MobileIcon>
         <NavMenu>
           <NavItem>
@@ -98,7 +117,12 @@ export function Header({ toggle, isOpen }: NavbarProps) {
               depoimentos
             </NavLinks>
           </NavItem>
-          <NavButton>Loja online</NavButton>
+          <NavButton
+            href="https://rvbbf8uvjsyz6sl3-72485830968.shopifypreview.com"
+            target="_blank"
+          >
+            Loja online
+          </NavButton>
         </NavMenu>
       </NavbarContainer>
     </HeaderContainer>

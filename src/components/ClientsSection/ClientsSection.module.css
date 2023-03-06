@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 115.43px 360px 231.28px;
+  padding: 115.43px 0 231.28px;
   width: "100%";
   align-items: center;
   justify-content: center;
+  word-wrap: break-all;
 }
 
 .clientsTitle {
@@ -18,7 +19,7 @@
 }
 
 .sliderWrapper {
-  width: 1093.96px;
+  width: 650px;
   height: 300px;
 }
 
@@ -28,4 +29,16 @@
   height: 282.39px;
   background-color: var(--gray-200);
   align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .sliderWrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .clientsTitle {
+    font-size: 50px;
+    width: 300.79px;
+  }
 }

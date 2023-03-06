@@ -7,7 +7,7 @@ export function ClientsSection() {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 2,
     speed: 500,
   };
   return (

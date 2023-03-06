@@ -33,28 +33,44 @@ export function Products() {
         <ProductItems>
           <ProductImage src={moscow_mule} />
           <ProductName data-aos="fade-down">Moscow Mule</ProductName>
-          <BuyProductLink href="#" data-aos="fade-down">
+          <BuyProductLink
+            href="https://rvbbf8uvjsyz6sl3-72485830968.shopifypreview.com/products/moscow-mule-750ml"
+            target="_blank"
+            data-aos="fade-down"
+          >
             comprar
           </BuyProductLink>
         </ProductItems>
         <ProductItems>
           <ProductImage src={fire} />
           <ProductName data-aos="fade-down">Fire</ProductName>
-          <BuyProductLink href="#" data-aos="fade-down">
+          <BuyProductLink
+            href="https://rvbbf8uvjsyz6sl3-72485830968.shopifypreview.com/products/fire-750ml"
+            target="_blank"
+            data-aos="fade-down"
+          >
             comprar
           </BuyProductLink>
         </ProductItems>
         <ProductItems>
           <ProductImage src={apple_pie} />
           <ProductName data-aos="fade-down">Apple Pie</ProductName>
-          <BuyProductLink href="#" data-aos="fade-down">
+          <BuyProductLink
+            href="https://rvbbf8uvjsyz6sl3-72485830968.shopifypreview.com/products/apple-pie-750ml"
+            target="_blank"
+            data-aos="fade-down"
+          >
             comprar
           </BuyProductLink>
         </ProductItems>
         <ProductItems>
           <ProductImage src={cosmopolitan} />
           <ProductName data-aos="fade-down">Cosmopolitan</ProductName>
-          <BuyProductLink href="#" data-aos="fade-down">
+          <BuyProductLink
+            href="https://rvbbf8uvjsyz6sl3-72485830968.shopifypreview.com/products/cosmopolitan-750ml"
+            target="_blank"
+            data-aos="fade-down"
+          >
             comprar
           </BuyProductLink>
         </ProductItems>

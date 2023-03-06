@@ -14,6 +14,7 @@ import {
   StepSpan,
   StepWrapper,
   StepWrapperRight,
+  StepWrapperRight4,
 } from "./Preparation";
 import step1 from "../../assets/step1.png";
 import drink1 from "../../assets/drink1.png";
@@ -50,10 +51,10 @@ export function Preparation() {
       <DrinkStepLeft>
         <DrinkLeftBg image={step1_bg} />
         <StepWrapper>
-          <StepImg src={drink1} data-aos="fade-right" />
-          <Step src={step1} data-aos="fade-down" />
+          <StepImg src={drink1} data-aos="fade-right" width={189.38} />
+          <Step src={step1} data-aos="fade-down" width={72.35} />
           <StepDescription width={219.85} data-aos="fade-left">
-            Primeiro, coloque <br /> <StepSpan>gelo</StepSpan> no copo/caneca
+            Primeiro, coloque<StepSpan> gelo </StepSpan> no copo/ caneca
           </StepDescription>
         </StepWrapper>
       </DrinkStepLeft>
@@ -69,30 +70,26 @@ export function Preparation() {
             de sua <br />
             preferência
           </StepDescriptionRight>
-          <StepRight src={step2} data-aos="fade-down" />
-          <StepImgRight src={drink2} data-aos="fade-left" />
+          <StepRight src={step2} data-aos="fade-down" width={72.35} />
+          <StepImgRight src={drink2} data-aos="fade-left" width={190.84} />
         </StepWrapperRight>
-        <DrinkRightBg image={step2_bg} />
+        <DrinkRightBg src={step2_bg} />
       </DrinkStepRight>
 
       <DrinkStepLeft>
         <DrinkLeftBg image={step3_bg} />
         <StepWrapper>
-          <StepImg src={drink3} data-aos="fade-right" />
-          <Step src={step3} data-aos="fade-down" />
+          <StepImg src={drink3} data-aos="fade-right" width={190.84} />
+          <Step src={step3} data-aos="fade-down" width={72.35} />
           <StepDescription width={309.97} data-aos="fade-left">
-            Complete com a quantidade <br /> de{" "}
-            <StepSpan>
-              água descrita na <br />
-              embalagem
-            </StepSpan>{" "}
-            e misture
+            Complete com a quantida de
+            <StepSpan> água descrita na embalagem</StepSpan> e misture
           </StepDescription>
         </StepWrapper>
       </DrinkStepLeft>
 
       <DrinkStepRight>
-        <StepWrapperRight style={{ marginLeft: "-67.54px" }}>
+        <StepWrapperRight4>
           <StepDescriptionRight width={302.11} data-aos="fade-right">
             Pronto! Para Moscow Mule <br /> finalize com a{" "}
             <StepSpan>
@@ -101,10 +98,10 @@ export function Preparation() {
             </StepSpan>{" "}
             da Bacco Spirit
           </StepDescriptionRight>
-          <StepRight src={step4} data-aos="fade-down" />
-          <StepImgRight src={drink4} data-aos="fade-left" />
-        </StepWrapperRight>
-        <DrinkRightBg image={step4_bg} />
+          <StepRight src={step4} data-aos="fade-down" width={72.35} />
+          <StepImgRight src={drink4} data-aos="fade-left" width={177.94} />
+        </StepWrapperRight4>
+        <DrinkRightBg src={step4_bg} />
       </DrinkStepRight>
     </PreparationContainer>
   );

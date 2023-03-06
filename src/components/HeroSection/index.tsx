@@ -30,7 +30,13 @@ export function HeroSection() {
             <HeroSpan>impressionar!</HeroSpan>
           </HeroText>
         </HeroTextContainer>
-        <HeroButton data-aos="fade-right">Comprar agora</HeroButton>
+        <HeroButton
+          data-aos="fade-right"
+          href="https://rvbbf8uvjsyz6sl3-72485830968.shopifypreview.com/collections/frontpage"
+          target="_blank"
+        >
+          Comprar agora
+        </HeroButton>
       </HeroContent>
     </HeroContainer>
   );

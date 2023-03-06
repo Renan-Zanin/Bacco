@@ -1,18 +1,35 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
+import { FaBars } from "react-icons/fa";
 
 interface NavbarContainerProps {
   isOpen: boolean;
 }
 
-export const HeaderContainer = styled.nav`
-  background-color: ${({ theme }) => theme.colors.gray100};
+interface MenuProps {
+  showMenu: boolean;
+}
+
+export const HeaderContainer = styled.nav<MenuProps>`
+  background-color: ${({ showMenu }) =>
+    showMenu ? "rgba( 245, 245, 245, 0.9 )" : "#f5f5f5"};
+
+  box-shadow: ${({ showMenu }) =>
+    showMenu ? "0 2px 16px 0 rgba( 0, 0, 0, 0.37 )" : ""};
+
+  backdrop-filter: ${({ showMenu }) => (showMenu ? "blur( 16.5px )" : "")};
+  -webkit-backdrop-filter: ${({ showMenu }) =>
+    showMenu ? "blur( 16.5px )" : ""};
+
   display: flex;
   justify-content: center;
   top: 0;
   z-index: 100;
+  padding-left: 40px;
+  padding-right: 40px;
 
-  padding: 40px;
+  padding-top: ${({ showMenu }) => (showMenu ? "15px" : "40px")};
+  padding-bottom: ${({ showMenu }) => (showMenu ? "15px" : "40px")};
   align-items: center;
   position: sticky;
 
@@ -28,7 +45,7 @@ export const NavbarContainer = styled.div<NavbarContainerProps>`
   width: 100%;
   padding: 0 135px;
   max-width: 1920px;
-  opacity: ${({ isOpen }) => (isOpen ? "50%" : "100%")};
+  opacity: ${({ isOpen }) => (isOpen ? "20%" : "100%")};
 
   @media screen and (max-width: 768px) {
     max-width: 700px;
@@ -41,8 +58,9 @@ export const NavbarContainer = styled.div<NavbarContainerProps>`
   }
 `;
 
-export const LogoImage = styled.img`
-  max-width: 50%;
+export const LogoImage = styled.img<MenuProps>`
+  max-width: ${({ showMenu }) => (showMenu ? "30%" : "50%")};
+  transition: 0.8s all ease;
 `;
 
 export const NavMenu = styled.ul`
@@ -88,7 +106,7 @@ export const NavLinks = styled(LinkS)`
   }
 `;
 
-export const NavButton = styled.button`
+export const NavButton = styled.a`
   background-color: ${({ theme }) => theme.colors.red};
   color: ${({ theme }) => theme.colors.white};
   margin-left: 20px;
@@ -102,6 +120,7 @@ export const NavButton = styled.button`
   padding: 15px 20px 10px 20px;
   cursor: pointer;
   border: none;
+  text-decoration: none;
 
   transition: all 0.2s ease-in-out;
   :hover {
@@ -110,19 +129,38 @@ export const NavButton = styled.button`
   }
 `;
 
-export const MobileIcon = styled.button`
+export const MobileIcon = styled.button<MenuProps>`
   display: none;
   border: none;
 
   @media screen and (max-width: 1519px) {
+    background-color: transparent;
     display: block;
     position: absolute;
-    top: 25%;
-    right: 0;
+    top: 20%;
+    right: 30px;
     transform: translate(-100%, 60%);
     font-size: ${({ theme }) => theme.font_size.MD}px;
+    height: auto;
+    transition: 0.8s all ease;
+    top: ${({ showMenu }) => (showMenu ? "20%" : "30%")};
 
     cursor: pointer;
     color: ${({ theme }) => theme.colors.red};
+  }
+
+  @media screen and (max-width: 768px) {
+    top: ${({ showMenu }) => (showMenu ? "20%" : "30%")};
+  }
+
+  @media screen and (max-width: 480px) {
+    top: ${({ showMenu }) => (showMenu ? "10%" : "30%")};
+  }
+`;
+
+export const MenuIcon = styled(FaBars)`
+  @media screen and (max-width: 480px) {
+    width: 25px;
+    height: auto;
   }
 `;
