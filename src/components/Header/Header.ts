@@ -32,6 +32,7 @@ export const HeaderContainer = styled.nav<MenuProps>`
   padding-bottom: ${({ showMenu }) => (showMenu ? "15px" : "40px")};
   align-items: center;
   position: sticky;
+  transition: 0.8s all ease;
 
   @media screen and (max-width: 1519px) {
     transition: 0.8s all ease;
