@@ -16,7 +16,7 @@ export default {
   },
 
   font_size: {
-    XSM: 16,
+    XSM: 14,
     XSM_R: 20,
     SM: 24,
     MD: 30,

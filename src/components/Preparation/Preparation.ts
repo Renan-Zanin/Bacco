@@ -19,6 +19,7 @@ export const PreparationContainer = styled.section`
   padding-top: 160px;
   padding-bottom: 160px;
   width: 100%;
+  z-index: 1;
 
   @media screen and (max-width: 768px) {
     padding-top: 90px;
@@ -26,6 +27,8 @@ export const PreparationContainer = styled.section`
 
   @media screen and (max-width: 480px) {
     padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 10px;
   }
 `;
 
@@ -52,9 +55,16 @@ export const SectionTitle = styled.h1`
 
 export const DrinkStepLeft = styled.div`
   position: relative;
+  @media screen and (max-width: 480px) {
+    margin-left: 55px;
+  }
 `;
 export const DrinkStepRight = styled.div`
   position: relative;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 50px;
+    margin-left: 55px;
+  }
 `;
 
 export const DrinkLeftBg = styled.div<BgProps>`
@@ -96,7 +106,7 @@ export const StepWrapper = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    margin-left: 110px;
+    margin-left: 80px;
   }
 `;
 
@@ -114,7 +124,8 @@ export const StepWrapperRight = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    margin-left: 105px;
+    margin-left: 155px;
+    margin-bottom: 200px;
   }
 `;
 
@@ -132,7 +143,8 @@ export const StepWrapperRight4 = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    margin-left: 180px;
+    left: -250px;
+    margin-left: 45px;
   }
 `;
 
@@ -150,9 +162,9 @@ export const Step = styled.img<ImgProps>`
   }
 
   @media screen and (max-width: 480px) {
-    width: ${(props) => props.width * 0.6}px;
-    margin-right: 30px;
-    margin-left: 35.03px;
+    width: ${(props) => props.width * 0.4}px;
+    margin-right: 20px;
+    margin-left: 25.03px;
   }
 `;
 
@@ -173,7 +185,7 @@ export const StepDescription = styled.p<DescriptionProps>`
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.XSM}px;
-    width: 150px;
+    width: ${(props) => props.width * 0.3}px;
   }
 `;
 
@@ -221,7 +233,7 @@ export const StepRight = styled.img<ImgProps>`
   }
 
   @media screen and (max-width: 480px) {
-    width: ${(props) => props.width * 0.6}px;
+    width: ${(props) => props.width * 0.4}px;
     margin-right: 30px;
     margin-left: 10.03px;
   }
@@ -238,7 +250,8 @@ export const StepImg = styled.img<ImgProps>`
   }
 
   @media screen and (max-width: 480px) {
-    width: ${(props) => props.width * 0.6}px;
+    width: ${(props) => props.width * 0.4}px;
+    margin-left: 60px;
   }
 `;
 
@@ -253,7 +266,7 @@ export const StepImgRight = styled.img<ImgProps>`
   }
 
   @media screen and (max-width: 480px) {
-    width: ${(props) => props.width * 0.6}px;
+    width: ${(props) => props.width * 0.4}px;
   }
 `;
 
@@ -272,6 +285,6 @@ export const StepDescriptionRight = styled.p<DescriptionProps>`
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.XSM}px;
-    width: 150px;
+    width: ${(props) => props.width * 0.4}px;
   }
 `;

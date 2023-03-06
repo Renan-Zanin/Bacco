@@ -8,7 +8,7 @@ interface SidebarProps {
 
 export const SidebarContainer = styled.aside<SidebarProps>`
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   width: 60%;
   height: 100%;
   background: ${({ theme }) => theme.colors.white};
@@ -21,6 +21,7 @@ export const SidebarContainer = styled.aside<SidebarProps>`
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   right: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   box-shadow: -5px 0 20px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.8s all ease;
 `;
 
 export const CloseIcon = styled(FaTimes)`

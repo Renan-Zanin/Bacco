@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   background-color: var(--gray-100);
-  padding: 219.97px 0 208.31px;
+  padding: 11.45% 10.84%;
+  padding-left: 18.75%;
   align-items: star;
   justify-content: start;
   background: linear-gradient(90deg, #000000 -12.75%, rgba(0, 0, 0, 0) 109.61%),
@@ -63,6 +64,12 @@
     text-align: start;
     align-items: flex-start;
     font-size: 30px;
-    margin-left: 20px;
+    margin-left: 10px;
+  }
+  .description {
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 400;
+    color: white;
   }
 }

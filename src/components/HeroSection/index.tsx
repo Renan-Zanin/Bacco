@@ -6,10 +6,12 @@ import {
   HeroSpan,
   HeroText,
   HeroTextContainer,
+  WhatsappButton,
 } from "./HeroSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import whatsapp from "../../assets/whatsapp.svg";
 
 export function HeroSection() {
   useEffect(() => {
@@ -38,6 +40,7 @@ export function HeroSection() {
           Comprar agora
         </HeroButton>
       </HeroContent>
+      <WhatsappButton width={145.94} height={145.94} imageLink={whatsapp} />
     </HeroContainer>
   );
 }

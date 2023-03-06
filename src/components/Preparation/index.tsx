@@ -62,12 +62,7 @@ export function Preparation() {
       <DrinkStepRight>
         <StepWrapperRight>
           <StepDescriptionRight width={234.65} data-aos="fade-right">
-            Adicione{" "}
-            <StepSpan>
-              50 ml do <br />
-              concentrado
-            </StepSpan>{" "}
-            de sua <br />
+            Adicione <StepSpan>50 ml do concentrado</StepSpan> de sua
             preferência
           </StepDescriptionRight>
           <StepRight src={step2} data-aos="fade-down" width={72.35} />
@@ -91,12 +86,8 @@ export function Preparation() {
       <DrinkStepRight>
         <StepWrapperRight4>
           <StepDescriptionRight width={302.11} data-aos="fade-right">
-            Pronto! Para Moscow Mule <br /> finalize com a{" "}
-            <StepSpan>
-              espuma de <br />
-              gengibre
-            </StepSpan>{" "}
-            da Bacco Spirit
+            Pronto! Para Moscow Mule finalize com a
+            <StepSpan> espuma de gengibre</StepSpan> da Bacco Spirit
           </StepDescriptionRight>
           <StepRight src={step4} data-aos="fade-down" width={72.35} />
           <StepImgRight src={drink4} data-aos="fade-left" width={177.94} />

@@ -13,7 +13,7 @@ export const PrizesContainer = styled.div`
   flex-direction: column;
   padding-top: 213.05px;
   padding-bottom: 319.61px;
-  padding-left: 357.17px;
+  padding-left: 18%;
   align-items: start;
   margin: 0 auto;
   height: 1200px;
@@ -38,6 +38,7 @@ export const PrizesContainer = styled.div`
     padding-left: 144px;
     height: 800.33px;
     padding-top: 100px;
+    padding-left: 10%;
   }
 
   @media screen and (max-width: 480px) {
@@ -65,7 +66,7 @@ export const PrizesBg = styled.div`
 
 export const PrizesContent = styled.div`
   z-index: 3;
-  max-width: 1200px;
+
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -120,7 +121,7 @@ export const PrizeTitle = styled.h1`
 
   @media screen and (max-width: 768px) {
     width: 498.15px;
-    font-size: ${({ theme }) => theme.font_size.XL_R}px;
+    font-size: ${({ theme }) => theme.font_size.XL}px;
     margin-bottom: 20px;
   }
 

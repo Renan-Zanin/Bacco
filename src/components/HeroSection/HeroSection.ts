@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import hero from "../../assets/hero.png";
 
+interface WhatsProps {
+  imageLink: string;
+  width: number;
+  height: number;
+}
+
 export const HeroContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +14,7 @@ export const HeroContainer = styled.section`
   padding-bottom: 219.93px;
   align-items: center;
   margin: 0 auto;
-  padding-left: 360px;
+  padding-left: 18.75%;
   position: relative;
   height: 900px;
   background-position: center;
@@ -70,14 +76,11 @@ export const HeroContent = styled.div`
 export const HeroTextContainer = styled.div`
   z-index: 3;
   flex-direction: column;
-  width: 790.65px;
-  height: 344.14px;
+
   word-break: break-word;
   margin-bottom: 70px;
   @media screen and (max-width: 768px) {
-    width: 600.26px;
     margin-bottom: 38px;
-    height: 253px;
   }
 
   @media screen and (max-width: 480px) {
@@ -94,7 +97,7 @@ export const HeroText = styled.h1`
   font-weight: 400;
 
   @media screen and (max-width: 768px) {
-    font-size: ${({ theme }) => theme.font_size.XL_R}px;
+    font-size: ${({ theme }) => theme.font_size.XL}px;
   }
 
   @media screen and (max-width: 480px) {
@@ -109,7 +112,7 @@ export const HeroSpan = styled.span`
   font-weight: 800;
 
   @media screen and (max-width: 768px) {
-    font-size: ${({ theme }) => theme.font_size.XL_R}px;
+    font-size: ${({ theme }) => theme.font_size.XL}px;
   }
 
   @media screen and (max-width: 480px) {
@@ -138,5 +141,37 @@ export const HeroButton = styled.a`
 
   @media screen and (max-width: 480px) {
     font-size: ${({ theme }) => theme.font_size.XSM}px;
+  }
+`;
+
+export const WhatsappButton = styled.a<WhatsProps>`
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
+  background-image: url(${(props) => props.imageLink});
+  position: absolute;
+  right: 9%;
+  bottom: 9.5%;
+  z-index: 10;
+  cursor: pointer;
+
+  :hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 768px) {
+    transform: scale(0.8);
+
+    :hover {
+      transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    transform: scale(0.6);
+    right: 2%;
+    bottom: 2%;
+    :hover {
+      transform: scale(0.7);
+    }
   }
 `;
